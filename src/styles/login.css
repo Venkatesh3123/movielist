@@ -1,0 +1,192 @@
+.label1 {
+  margin-left: -100px;
+  color: white;
+  font-weight: bold;
+}
+.label5 {
+  margin-left: 25px;
+  color: white;
+  font-weight: bold;
+  /* padding:2px; */
+}
+.label51 {
+  margin-left: 25px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 15px;
+  /* padding:2px; */
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../images/main2.jpg");
+  background-size: 100% auto;
+}
+.form1 {
+  width: 400px;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 5mm;
+  padding: 40px 30px;
+  backdrop-filter: blur(5px) saturate(160%);
+  -webkit-backdrop-filter: blur(5px) saturate(160%);
+  background-image: url("../images/blur2.jpg");
+  border: 2px solid BLACK;
+  box-shadow: 1px 5px 20px rgb(25, 59, 127);
+  background-size: 400px 800px;
+  background-repeat: no-repeat;
+  border: 0.5mm solid rgba(0, 0, 0, 0.65);
+  position: relative;
+}
+.title {
+  width: 100%;
+  font-family: poppins;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+.inputs {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+.inputf {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  margin: 15px 0;
+  position: relative;
+}
+.input {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 0.55mm solid rgb(255, 255, 255);
+  background: none;
+  padding: 0 15px;
+  font-family: poppins;
+  font-size: 15px;
+  color: white;
+  outline: none;
+}
+.input::placeholder {
+  color: rgb(241, 232, 232);
+}
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: poppins;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.25s ease-out;
+}
+.input:focus + .label {
+  top: -20px;
+  opacity: 1;
+  z-index: 1;
+}
+.input:focus::placeholder {
+  opacity: 0;
+}
+.input:not(:placeholder-shown) + .label {
+  top: -20px;
+  opacity: 1;
+  z-index: 1;
+}
+.icon {
+  color: white;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 18px;
+}
+.links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: poppins;
+  margin-bottom: 50px;
+  color: white;
+}
+.links label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.links a {
+  font-weight: 600;
+  color: white;
+}
+.bt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 40px;
+  color: rgb(10, 8, 8);
+  font-family: poppins;
+  font-size: 16px;
+}
+.text {
+  width: 100%;
+  font-family: poppins;
+  font-size: 13px;
+  text-align: center;
+  color: rgb(240, 240, 240);
+  padding-top: 15px;
+  color: white;
+  font-size: 15px;
+}
+.text a {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+.text a:hover {
+  color: black;
+}
+.links a {
+  font-size: 19px;
+  text-decoration: none;
+}
+.links a:hover {
+  color: black;
+}
+.Register {
+  font-size: 19px;
+  font-family: 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Register:hover {
+  color: red;
+}
+.links a:hover {
+  color: red;
+}
+.rem {
+  font-size: 19px;
+}
+.error1 {
+  color: red;
+  margin-left: 20px;
+}
