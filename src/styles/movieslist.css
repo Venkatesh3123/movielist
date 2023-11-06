@@ -20,10 +20,10 @@ body {
 }
 .icon {
   cursor: pointer;
-  cursor: pointer;
 }
 .down-arrow {
   margin-top: -600px;
+  cursor: pointer;
 }
 .one {
   margin-left: 25px;

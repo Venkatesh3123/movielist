@@ -43,6 +43,39 @@ const MovieList = () => {
   useEffect(() => {
     fetchData();
   }, []);
+  const finaldata = movieData.map((movie, index) => (
+    <li key={index} className="movie-item">
+      <div className="icons-column">
+        <TiArrowSortedUp size={60} className="up-arrow" />
+        <p>{1}</p>
+        <TiArrowSortedDown size={60} className="down-arrow" />
+        <p className="votes">Votes</p>
+      </div>
+      <div className="image-column">
+        <img
+          src={movie.poster}
+          alt={movie.title}
+          className="rounded-md h-60 w-46"
+        />
+      </div>
+      <div className="details-column">
+        <p>Name: {movie.title}</p>
+        <p>Genre: {movie.genre}</p>
+        <p>Director: {movie.director}</p>
+        <p>Starring: {movie.stars}</p>
+        <span>
+          <p>
+            Mins | {movie.language} |{formatDate(movie.releasedDate)}
+          </p>
+        </span>
+        <p className="blue-text">
+          {movie.pageViews} views|
+          <span>Votes</span> voted by <span>1 people</span>
+        </p>
+        <button className="button-watch">Watch Trailer</button>
+      </div>
+    </li>
+  ));
 
   return (
     <div>
@@ -61,41 +94,7 @@ const MovieList = () => {
       {movieData && movieData.length === 0 ? (
         <div className="loader"></div>
       ) : (
-        <ul className="movie-list">
-          {movieData.map((movie, index) => (
-            <li key={index} className="movie-item">
-              <div className="icons-column">
-                <TiArrowSortedUp size={60} className="up-arrow" />
-                <p>{1}</p>
-                <TiArrowSortedDown size={60} className="down-arrow" />
-                <p className="votes">Votes</p>
-              </div>
-              <div className="image-column">
-                <img
-                  src={movie.poster}
-                  alt={movie.title}
-                  className="rounded-md h-60 w-46"
-                />
-              </div>
-              <div className="details-column">
-                <p>Name: {movie.title}</p>
-                <p>Genre: {movie.genre}</p>
-                <p>Director: {movie.director}</p>
-                <p>Starring: {movie.stars}</p>
-                <span>
-                  <p>
-                    Mins | {movie.language} |{formatDate(movie.releasedDate)}
-                  </p>
-                </span>
-                <p className="blue-text">
-                  {movie.pageViews} views|
-                  <span>Votes</span> voted by <span>1 people</span>
-                </p>
-                <button className="button-watch">Watch Trailer</button>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <ul className="movie-list">{finaldata}</ul>
       )}
     </div>
   );
